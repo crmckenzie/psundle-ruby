@@ -5,7 +5,7 @@
   .PARAMETER version
   Regular expression used to match a ruby version.
 #>
-﻿function Use-Ruby(
+Function Use-Ruby(
     [Parameter(Mandatory=$true)][string]$version
 )
 {
