@@ -1,3 +1,10 @@
+<#
+  .SYNOPSIS
+  Returns the first registered ruby matching the supplied version
+
+  .PARAMETER version
+  Regular expression used to match a ruby version.
+#>
 function Get-RegisteredRuby(
   [Parameter(Mandatory=$true)][string]$version
 ){

@@ -1,3 +1,10 @@
+<#
+  .SYNOPSIS
+  Modifies the current shell to use the specified version or ruby.
+
+  .PARAMETER version
+  Regular expression used to match a ruby version.
+#>
 ﻿function Use-Ruby(
     [Parameter(Mandatory=$true)][string]$version
 )

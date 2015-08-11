@@ -1,3 +1,7 @@
+<#
+  .SYNOPSIS
+  Displays the current Ruby configurartion.
+#>
 function Show-RubyEnvironment{
 
   $registeredRubies = Get-RegisteredRubies

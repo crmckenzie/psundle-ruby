@@ -1,3 +1,7 @@
+<#
+  .SYNOPSIS
+  Displays the list of registered rubies.
+#>
 function Get-RegisteredRubies
 {
   [string] $memo = [Environment]::GetEnvironmentVariable("PSUNDLE_RUBY_PATHS", "User")

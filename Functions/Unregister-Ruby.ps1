@@ -1,4 +1,11 @@
-function Remove-Ruby([Parameter(Mandatory=$true)][string]$path)
+<#
+  .SYNOPSIS
+  Removes a path from the list of registered rubies.
+
+  .PARAMETER path
+  The path of the ruby to remove.
+#>
+function Unregister-Ruby([Parameter(Mandatory=$true)][string]$path)
 {
   [Array] $paths = Get-RegisteredRubies
 

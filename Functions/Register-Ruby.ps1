@@ -1,3 +1,10 @@
+<#
+  .SYNOPSIS
+  Registers the ruby path if it is not already registered.
+
+  .PARAMETER path
+  The path of the ruby to be registered.
+#>
 function Register-Ruby([Parameter(Mandatory=$true)][string]$path)
 {
   [Array] $paths = Get-RegisteredRubies
@@ -12,9 +19,9 @@ function Register-Ruby([Parameter(Mandatory=$true)][string]$path)
   $arrayList.AddRange($paths)
   if ($arrayList.Contains($newDir.FullName) -eq $false) {
     $arrayList.Add($newDir.FullName)
+    $newPaths = [System.String]::Join(';', $arrayList.ToArray())
+    [Environment]::SetEnvironmentVariable("PSUNDLE_RUBY_PATHS", $newPaths, "User")
   }
 
-  $newPaths = [System.String]::Join(';', $arrayList.ToArray())
-  [Environment]::SetEnvironmentVariable("PSUNDLE_RUBY_PATHS", $newPaths, "User")
   return
 }
