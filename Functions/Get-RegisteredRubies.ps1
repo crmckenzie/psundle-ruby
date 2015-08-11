@@ -1,0 +1,13 @@
+function Get-RegisteredRubies
+{
+  [string] $memo = [Environment]::GetEnvironmentVariable("PSUNDLE_RUBY_PATHS", "User")
+  if ($memo -eq $null){
+    return New-Object "System.Collections.ArrayList"
+  }
+
+  [Array] $paths = $memo.Split(';') |
+    % { New-Object "System.IO.DirectoryInfo" $_ } |
+    select -Expand FullName
+
+  return $paths
+}
