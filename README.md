@@ -44,3 +44,9 @@ automatically when the module loads.
 
 #### .PARAMETER version
 Regular expression used to match a ruby version.
+
+
+## For Future Consideration
+
+* Installation of Ruby - Ruby Devkit
+* Fix for missing gem.bat file in Ruby 2.1.6
