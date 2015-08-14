@@ -5,7 +5,7 @@
 function Get-RegisteredRubies
 {
   [string] $memo = [Environment]::GetEnvironmentVariable("PSUNDLE_RUBY_PATHS", "User")
-  if ($memo -eq $null){
+  if ([string]::IsNullOrEmpty($memo)){
     return New-Object "System.Collections.ArrayList"
   }
 
