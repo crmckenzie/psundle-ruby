@@ -6,7 +6,7 @@
     Description        = 'Tools to facilitate using Ruby on Windows'
     PowerShellVersion  = '3.0'
     CLRVersion         = '4.0'
-    ModuleVersion      = '0.1'
-    ModuleToProcess    = 'Ruby.psm1'  
+    ModuleVersion      = '0.2'
+    ModuleToProcess    = 'Ruby.psm1'
 
 }
